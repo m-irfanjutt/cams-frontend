@@ -1,0 +1,70 @@
+/* src/styles/SystemConfig.module.css */
+.settingsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.settingCard {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.settingCard h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 15px;
+}
+
+.formGroup, .toggleGroup {
+    margin-bottom: 15px;
+}
+
+.formGroup label, .toggleGroup label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.formGroup select {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid var(--input-border);
+    border-radius: 8px;
+}
+
+.toggleGroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.actions {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.actions button {
+    padding: 12px 25px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.disclaimer {
+    background-color: #fff3e0;
+    color: #e65100;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border: 1px solid #ffcc80;
+}

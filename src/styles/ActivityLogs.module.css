@@ -1,0 +1,90 @@
+/* src/styles/ActivityLogs.module.css */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.addButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.tableContainer {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.logsTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.logsTable th, .logsTable td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.logsTable th {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #888;
+}
+
+.activityType {
+    font-weight: 600;
+}
+
+.details {
+    font-size: 0.9rem;
+    color: #555;
+    text-transform: capitalize;
+}
+
+.actionButtons {
+    display: flex;
+    gap: 10px;
+}
+.actionButtons button {
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.editBtn {
+    background-color: #e3f2fd;
+    color: #1e88e5;
+}
+
+.deleteBtn {
+    background-color: #ffcdd2;
+    color: #c62828;
+}
+
+.error {
+    color: #d32f2f;
+}
+
+.noData {
+    text-align: center;
+    padding: 40px;
+    color: #888;
+}

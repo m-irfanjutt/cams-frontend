@@ -1,0 +1,13 @@
+/* src/styles/Header.module.css */
+.header {
+margin-bottom: 30px;
+}
+.header h1 {
+font-size: 1.8rem;
+font-weight: 600;
+color: var(--text-dark);
+}
+.header p {
+color: #888;
+font-size: 1rem;
+}

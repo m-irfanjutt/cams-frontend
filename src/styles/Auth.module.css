@@ -1,0 +1,210 @@
+/* src/styles/Auth.module.css */
+.authContainer {
+  display: flex;
+  width: 900px;
+  height: 600px;
+  background-color: var(--card-background);
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+.leftPanel {
+  flex: 1;
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  color: var(--text-light);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 60px; /* You will need to add a logo image to your public folder */
+  margin-bottom: 10px;
+}
+
+.branding h2 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.featureItem {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.rightPanel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.authForm {
+  width: 100%;
+  max-width: 350px;
+}
+
+.authForm h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.authForm p {
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.inputGroup {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.inputGroup input:focus {
+  outline: none;
+  border-color: var(--input-focus-border);
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+}
+
+.options a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  color: var(--text-light);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+}
+
+.switchForm {
+  text-align: center;
+  margin-top: 20px;
+}
+.switchForm a {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+/* src/styles/Auth.module.css (add at the end) */
+.errorMessage {
+  color: #D8000C; /* Red color for errors */
+  background-color: #FFD2D2;
+  border: 1px solid #D8000C;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px !important;
+  text-align: center;
+}
+
+.signupContainer {
+  width: 950px;
+  height: 700px;
+}
+.signupPanel {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/* Make single inputs and selects take up full width */
+.authForm input, .authForm select {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.authForm select {
+  appearance: none; /* For custom dropdown arrow if needed */
+  background-color: white;
+}
+
+.formRow {
+  display: flex;
+  gap: 15px;
+}
+
+.roleSelector {
+  display: flex;
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.roleSelector button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background-color: #f9f9f9;
+  color: #888;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.roleSelector button.activeRole {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.successMessage {
+  color: #2F6F2F; /* Green color for success */
+  background-color: #E7F3E7;
+  border: 1px solid #2F6F2F;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px !important;
+  text-align: center;
+}

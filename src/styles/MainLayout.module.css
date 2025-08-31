@@ -1,0 +1,12 @@
+/* src/styles/MainLayout.module.css */
+.layoutContainer {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--background-light);
+}
+
+.mainContent {
+  flex-grow: 1;
+  padding: 30px;
+  overflow-y: auto;
+}

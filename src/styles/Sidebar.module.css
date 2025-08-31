@@ -1,0 +1,125 @@
+/* src/styles/Sidebar.module.css */
+.sidebar {
+  width: 260px;
+  background-color: var(--card-background);
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.branding {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.branding h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.userName {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.userRole {
+  font-size: 0.8rem;
+  color: #888;
+  text-transform: capitalize;
+}
+
+.navigation {
+  flex-grow: 1;
+}
+
+.navHeader {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: #aaa;
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  padding: 12px 10px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.navLink:hover {
+  background-color: var(--background-light);
+  color: var(--primary-color);
+}
+
+.navLink.active {
+  background: linear-gradient(90deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  color: var(--text-light);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navLink svg {
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+.logoutSection {
+  margin-top: auto; /* Pushes the logout button to the bottom */
+}
+
+.logoutButton {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 12px 10px;
+  border: none;
+  background-color: transparent;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.logoutButton:hover {
+  background-color: #fbe9e7;
+  color: #d32f2f;
+}
+
+.logoutButton svg {
+  margin-right: 15px;
+  font-size: 1.2rem;
+}

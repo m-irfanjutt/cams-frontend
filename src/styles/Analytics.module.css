@@ -1,0 +1,72 @@
+/* src/styles/Analytics.module.css */
+.chartGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.chartCard {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.chartCard h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.doughnutContainer {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.instructorList {
+    list-style: none;
+    padding: 0;
+}
+
+.instructorList li {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.instructorList li:last-child {
+    border-bottom: none;
+}
+
+.instructorName {
+    font-weight: 500;
+}
+
+.activityCount {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.error {
+    color: #c62828;
+}
+/* src/styles/Analytics.module.css (add at the end) */
+.noDataPlaceholder {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px dashed var(--input-border);
+    margin-top: 30px;
+}
+
+.noDataPlaceholder h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.noDataPlaceholder p {
+    color: #888;
+}

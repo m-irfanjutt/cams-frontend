@@ -1,0 +1,122 @@
+/* src/styles/Reports.module.css */
+.reportsContainer {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 30px;
+}
+
+.generatePanel, .overviewPanel {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.generatePanel h3, .overviewPanel h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.formGroup {
+    margin-bottom: 20px;
+}
+
+.formGroup label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.formGroup select, .formGroup input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--input-border);
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.generateButton {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.reportList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.reportItem {
+    display: flex;
+    align-items: center;
+    background-color: #f9faff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e0e7ff;
+}
+
+.reportInfo {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.reportIcon {
+    font-size: 1.5rem;
+}
+
+.reportName {
+    font-weight: 600;
+}
+
+.reportMeta {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.reportStatus {
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin: 0 20px;
+}
+
+.reportActions {
+    display: flex;
+    gap: 10px;
+}
+
+.reportActions button {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #888;
+}
+
+.reportActions button a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+
+.reportActions button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.statusIcon {
+    vertical-align: middle;
+}
+.completed { color: #27ae60; }
+.pending { color: #f39c12; }
+.failed { color: #c0392b; }

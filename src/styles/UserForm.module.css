@@ -1,0 +1,50 @@
+/* src/styles/UserForm.module.css */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+}
+
+.form input, .form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.formActions button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cancelBtn {
+  background-color: #f0f0f0;
+  color: #555;
+}
+
+.submitBtn {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.error {
+    color: #c62828;
+    text-align: center;
+    font-size: 0.9rem;
+}

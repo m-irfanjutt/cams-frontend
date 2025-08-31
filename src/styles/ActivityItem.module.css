@@ -1,0 +1,40 @@
+/* src/styles/ActivityItem.module.css */
+.itemContainer {
+display: flex;
+align-items: center;
+padding: 15px 0;
+border-bottom: 1px solid #f0f0f0;
+}
+.itemContainer:last-child {
+border-bottom: none;
+}
+.avatar {
+width: 40px;
+height: 40px;
+min-width: 40px;
+border-radius: 50%;
+background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+color: #fff;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: 600;
+margin-right: 15px;
+}
+.itemContent {
+flex-grow: 1;
+}
+.message {
+color: var(--text-dark);
+font-weight: 500;
+margin-bottom: 3px;
+}
+.timestamp {
+font-size: 0.8rem;
+color: #888;
+}
+.icon {
+font-size: 1.2rem;
+color: #aaa;
+margin-left: 15px;
+}
