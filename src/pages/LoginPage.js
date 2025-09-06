@@ -34,7 +34,7 @@ const LoginPage = () => {
       <div className={styles.authContainer}>
           <div className={styles.leftPanel}>
               <div className={styles.branding}>
-                  <img src="/cams-logo.png" alt="CAMS Logo" className={styles.logo} />
+                  <img src="/images/app_logo.png" className={styles.logo} alt="CAMS Logo" />
                   <h2>CAMS</h2>
                   <p>Course Activity Management & Monitoring System</p>
               </div>

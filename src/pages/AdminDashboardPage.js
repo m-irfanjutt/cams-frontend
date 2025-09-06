@@ -53,21 +53,21 @@ const AdminDashboardPage = () => {
           icon={<FiUsers />}
           title="Total Users"
           value={stats.total_users}
-          growth="+12" // Mock growth data as it's not from the backend
+          growth={stats.total_users_growth}
           iconBgColor="#2980b9"
         />
         <StatCard
           icon={<FiUserCheck />}
           title="Active Instructors"
           value={stats.active_instructors}
-          growth="+8"
+          growth={stats.active_instructors_growth}
           iconBgColor="#27ae60"
         />
         <StatCard
           icon={<FiFileText />}
           title="Reports Generated"
           value={stats.reports_generated}
-          growth="+15"
+          growth={stats.reports_generated_growth}
           iconBgColor="#f39c12"
         />
         <StatCard

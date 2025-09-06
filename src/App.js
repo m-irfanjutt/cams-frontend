@@ -14,6 +14,7 @@ import SignUpPage from './pages/SignUpPage'; // Import the new page
 import AnalyticsPage from './pages/AnalyticsPage';
 import ActivityLogsPage from './pages/ActivityLogsPage';
 import MyPerformancePage from './pages/MyPerformancePage';
+import CourseManagementPage from './pages/CourseManagementPage';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             {/* ... (all protected routes remain the same) ... */}
             <Route path="/admin/dashboard" element={<AdminDashboardPage />} />
             <Route path="/admin/users" element={<UserManagementPage />} />
+            <Route path="/admin/courses" element={<CourseManagementPage />} /> {/* ADD THIS LINE */}
             <Route path="/admin/reports" element={<ReportsPage />} />
             <Route path="/admin/settings" element={<SystemConfigPage />} />
             <Route path="/admin/analytics" element={<AnalyticsPage />} /> {/* Add this line */}

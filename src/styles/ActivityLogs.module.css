@@ -1,90 +1,332 @@
 /* src/styles/ActivityLogs.module.css */
+
+/* Main container */
 .controls {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
+/* Filter section */
+.filterSection {
+    flex: 1;
+    min-width: 300px;
+}
+
+.filterGroup {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filterSelect,
+.filterInput {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    min-width: 150px;
+}
+
+.filterSelect:focus,
+.filterInput:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.clearFiltersBtn {
+    padding: 0.5rem 1rem;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.clearFiltersBtn:hover {
+    background-color: #5a6268;
+}
+
+/* Add button */
 .addButton {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 10px 15px;
-    background-color: var(--primary-color);
-    color: #fff;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #28a745;
+    color: white;
     border: none;
-    border-radius: 8px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 500;
+    border-radius: 4px;
     cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+    white-space: nowrap;
 }
 
+.addButton:hover {
+    background-color: #218838;
+}
+
+/* Summary section */
+.summarySection {
+    margin-bottom: 1rem;
+}
+
+.resultsSummary {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Table container and table */
 .tableContainer {
-    background-color: #fff;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .logsTable {
     width: 100%;
     border-collapse: collapse;
+    font-size: 0.9rem;
 }
 
-.logsTable th, .logsTable td {
-    padding: 15px;
+.logsTable th,
+.logsTable td {
+    padding: 1rem;
     text-align: left;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #dee2e6;
 }
 
 .logsTable th {
-    font-size: 0.8rem;
+    background-color: #f8f9fa;
     font-weight: 600;
-    text-transform: uppercase;
-    color: #888;
+    color: #495057;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
+.logsTable tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Activity type badges */
 .activityType {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Activity type specific colors */
+.activityType.mdb_replies {
+    background-color: #e3f2fd;
+    color: #1565c0;
+}
+
+.activityType.ticket_responses {
+    background-color: #fff3e0;
+    color: #ef6c00;
+}
+
+.activityType.assignment_upload {
+    background-color: #e8f5e8;
+    color: #2e7d32;
+}
+
+.activityType.assignment_marking {
+    background-color: #fce4ec;
+    color: #c2185b;
+}
+
+.activityType.gdb_marking {
+    background-color: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.activityType.weekly_session {
+    background-color: #fff8e1;
+    color: #f57f17;
+}
+
+.activityType.email_responses {
+    background-color: #e0f2f1;
+    color: #00695c;
+}
+
+/* Course information */
+.courseInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.courseCode {
     font-weight: 600;
+    color: #333;
 }
 
+.courseName {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Details styling */
 .details {
-    font-size: 0.9rem;
     color: #555;
-    text-transform: capitalize;
+    line-height: 1.4;
+    max-width: 300px;
+    word-wrap: break-word;
 }
 
+/* Date information */
+.dateInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.date {
+    font-weight: 500;
+    color: #333;
+}
+
+.time {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Action buttons */
 .actionButtons {
     display: flex;
-    gap: 10px;
+    gap: 0.5rem;
 }
-.actionButtons button {
-    padding: 5px 10px;
-    border-radius: 6px;
-    border: 1px solid transparent;
+
+.editBtn,
+.deleteBtn {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
     font-size: 0.8rem;
     font-weight: 500;
+    transition: all 0.2s;
 }
 
 .editBtn {
-    background-color: #e3f2fd;
-    color: #1e88e5;
+    background-color: #007bff;
+    color: white;
+}
+
+.editBtn:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
 }
 
 .deleteBtn {
-    background-color: #ffcdd2;
-    color: #c62828;
+    background-color: #dc3545;
+    color: white;
 }
 
+.deleteBtn:hover {
+    background-color: #c82333;
+    transform: translateY(-1px);
+}
+
+/* Error and no data states */
 .error {
-    color: #d32f2f;
+    color: #dc3545;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
 }
 
 .noData {
     text-align: center;
-    padding: 40px;
-    color: #888;
+    color: #6c757d;
+    padding: 3rem 1rem;
+    font-style: italic;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .logsTable {
+        font-size: 0.8rem;
+    }
+    
+    .logsTable th,
+    .logsTable td {
+        padding: 0.75rem 0.5rem;
+    }
+    
+    .details {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filterGroup {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filterSelect,
+    .filterInput {
+        min-width: unset;
+        width: 100%;
+    }
+    
+    .addButton {
+        justify-content: center;
+    }
+    
+    .tableContainer {
+        overflow-x: auto;
+    }
+    
+    .logsTable {
+        min-width: 800px;
+    }
+    
+    .actionButtons {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .logsTable th,
+    .logsTable td {
+        padding: 0.5rem 0.25rem;
+    }
+    
+    .activityType {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+    }
+    
+    .editBtn,
+    .deleteBtn {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.7rem;
+    }
 }

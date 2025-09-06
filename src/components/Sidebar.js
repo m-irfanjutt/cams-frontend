@@ -9,7 +9,8 @@ import {
   FiFileText, 
   FiSettings, 
   FiBarChart2, 
-  FiLogOut 
+  FiLogOut,
+  FiBookOpen
 } from 'react-icons/fi';
 
 const Sidebar = () => {
@@ -25,6 +26,7 @@ const Sidebar = () => {
   const adminLinks = [
     { icon: <FiGrid />, text: 'Dashboard', path: '/admin/dashboard' },
     { icon: <FiUsers />, text: 'User Management', path: '/admin/users' },
+    { icon: <FiBookOpen />, text: 'Course Management', path: '/admin/courses' }, // ADD THIS LINE
     { icon: <FiFileText />, text: 'Reports', path: '/admin/reports' },
     { icon: <FiSettings />, text: 'System Config', path: '/admin/settings' },
   ];

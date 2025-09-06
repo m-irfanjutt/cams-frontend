@@ -1,0 +1,295 @@
+/* src/styles/ActivityForm.module.css */
+
+/* Main form container */
+.activityForm {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+}
+
+/* Form groups */
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.formGroup label:after {
+    content: "";
+}
+
+/* Input styling */
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+/* Textarea specific */
+.formGroup textarea {
+    resize: vertical;
+    min-height: 100px;
+    font-family: inherit;
+}
+
+/* Select dropdown */
+.formGroup select {
+    cursor: pointer;
+    background-color: white;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+/* Activity-specific section */
+.activitySpecificSection {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid #e9ecef;
+}
+
+.activitySpecificSection h4 {
+    margin: 0 0 1.5rem 0;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Select activity prompt */
+.selectActivityPrompt {
+    text-align: center;
+    padding: 2rem;
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Form actions */
+.formActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.cancelBtn,
+.submitBtn {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 120px;
+}
+
+.cancelBtn {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    border: 2px solid #dee2e6;
+}
+
+.cancelBtn:hover {
+    background-color: #e9ecef;
+    color: #495057;
+    transform: translateY(-1px);
+}
+
+.submitBtn {
+    background-color: #007bff;
+    color: white;
+}
+
+.submitBtn:hover:not(:disabled) {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.submitBtn:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Error message */
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid #f5c6cb;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* Validation states */
+.formGroup input:invalid,
+.formGroup select:invalid,
+.formGroup textarea:invalid {
+    border-color: #dc3545;
+}
+
+.formGroup input:invalid:focus,
+.formGroup select:invalid:focus,
+.formGroup textarea:invalid:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+.formGroup input:valid,
+.formGroup select:valid,
+.formGroup textarea:valid {
+    border-color: #28a745;
+}
+
+/* Number input styling */
+.formGroup input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.formGroup input[type="number"]::-webkit-outer-spin-button,
+.formGroup input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Date input styling */
+.formGroup input[type="date"] {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3e%3c/rect%3e%3cline x1='16' y1='2' x2='16' y2='6'%3e%3c/line%3e%3cline x1='8' y1='2' x2='8' y2='6'%3e%3c/line%3e%3cline x1='3' y1='10' x2='21' y2='10'%3e%3c/line%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .activityForm {
+        padding: 1rem;
+        margin: 0;
+    }
+    
+    .formActions {
+        flex-direction: column-reverse;
+        gap: 0.75rem;
+    }
+    
+    .cancelBtn,
+    .submitBtn {
+        width: 100%;
+        min-width: unset;
+    }
+    
+    .formGroup input,
+    .formGroup select,
+    .formGroup textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+}
+
+@media (max-width: 480px) {
+    .activityForm {
+        padding: 0.75rem;
+    }
+    
+    .formGroup {
+        margin-bottom: 1.25rem;
+    }
+    
+    .activitySpecificSection {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+    }
+    
+    .formActions {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+    }
+}
+
+/* Loading state for submit button */
+.submitBtn:disabled {
+    position: relative;
+}
+
+.submitBtn:disabled:after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    border: 2px solid transparent;
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Required field indicator */
+.formGroup label:after {
+    content: " *";
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Optional field - remove asterisk */
+.formGroup.optional label:after {
+    content: "";
+}
+
+/* Helper text */
+.formGroup .helperText {
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-top: 0.25rem;
+    line-height: 1.4;
+}
+
+/* Field groups for better organization */
+.fieldGroup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 600px) {
+    .fieldGroup {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
